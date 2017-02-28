@@ -31,15 +31,14 @@ $('.fa-twitter').click(function() {
     window.open(createTwitterPost());
 });
 
-function updateQuote() {  
-  
+function updateQuote() {
     $.ajaxSetup({ cache: false });
-    $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(json) {
+    $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(json) {
         var currentQuote = json[0].content;
         currentQuote = removeHTMLMarkUp(currentQuote);
         var title = json[0].title;
-        $("#quote-text").html(currentQuote); 
-        $("#quote-person").html("- " + title); 
+        $("#quote-text").html(currentQuote);
+        $("#quote-person").html("- " + title);
     });
 }
 
