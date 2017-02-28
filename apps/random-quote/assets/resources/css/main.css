@@ -1,0 +1,150 @@
+/* -- Variables -- */
+
+$icolor: white;
+
+/* icon color       */
+
+$scolor: #12664b;
+
+/* shadow color   */
+
+$bcolor: #1b926c;
+
+/* background color */
+
+$bradius: 2;
+
+/* bg border radius */
+
+$length: 50;
+
+/* box length       */
+
+@mixin long-shadow ($scolor, $length) {
+    $list: ();
+    @for $i from 1 through $length {
+        $list: append($list, $scolor $i+px $i+px, comma);
+    }
+    text-shadow: $list;
+}
+
+#demo-show-snackbar {
+    float: right;
+    margin: 10px;
+}
+
+#icon-box span {
+    display: block;
+}
+
+#social-button-twitter {
+    display: block;
+    position: absolute;
+    height: $length+px;
+    width: $length+px;
+    color: $icolor;
+    padding-left: 30px;
+    @include long-shadow ($scolor, $length);
+}
+
+#new-quote-btn {
+    display: block;
+    padding-left: 30px;
+    // position: absolute;
+    // height: $length+px;
+    // width: 100px;
+    // color: $icolor;
+    // @include long-shadow ($scolor, $length);
+}
+
+@mixin border-radius ($bradius) {
+    -webkit-border-radius: $bradius+px;
+    -moz-border-radius: $bradius+px;
+    -ms-border-radius: $bradius+px;
+    border-radius: $bradius+px;
+}
+
+#icon-box {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    // width: $length+px;
+    height: $length+px;
+    font-size: $length/2+px;
+    line-height: $length+px;
+    background-color: $bcolor;
+    @include border-radius ($bradius);
+}
+
+#social-button-twitter {
+    text-align: left;
+}
+
+#social-button-twitter div {
+    display: inline-block;
+    margin: .5em;
+}
+
+#new-quote-btn {
+    text-align: center;
+    color: white;
+}
+
+#new-quote-btn span {
+    display: inline-block;
+    // margin: .5em;
+}
+body {
+    background: url("./apps/random-quote/assets/resources/img/background.png");
+}
+
+.container {
+    padding-top: 60px;
+}
+
+.fa-twitter:hover {
+    transition: color 1s;
+    color: #00aced;
+}
+
+#quote-text {
+    font-size: medium;
+    transition: background-color 3s;
+}
+
+#quote-person {
+    text-align: right;
+    font-style: italic;
+    width: 100%;
+}
+
+.mdl-card__title {
+    min-height: 200px;
+}
+
+.aboutPage {
+    font-size: 11px;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+.background-image-acknowledgement {
+    font-size: 10px;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* .color-change {
+  transition: background-color 3s;
+} */
+
+.mdl-cell {
+    margin-top: 0px;
+}
+
+.mdl-grid {
+    padding: 0px;
+}
