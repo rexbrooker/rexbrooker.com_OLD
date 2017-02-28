@@ -95,7 +95,7 @@ $length: 50;
     // margin: .5em;
 }
 body {
-    background: url("./apps/random-quote/assets/resources/img/background.png");
+    background: url("../img/background.png");
 }
 
 .container {
