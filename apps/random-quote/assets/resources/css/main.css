@@ -1,1 +1,93 @@
+/* -- Variables -- */
+/* icon color       */
+/* shadow color   */
+/* background color */
+/* bg border radius */
+/* box length       */
+#icon-box span {
+  display: block; }
 
+#social-button-twitter {
+  display: block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  color: white;
+  padding-left: 30px;
+  text-shadow: #12664b 1px 1px, #12664b 2px 2px, #12664b 3px 3px, #12664b 4px 4px, #12664b 5px 5px, #12664b 6px 6px, #12664b 7px 7px, #12664b 8px 8px, #12664b 9px 9px, #12664b 10px 10px, #12664b 11px 11px, #12664b 12px 12px, #12664b 13px 13px, #12664b 14px 14px, #12664b 15px 15px, #12664b 16px 16px, #12664b 17px 17px, #12664b 18px 18px, #12664b 19px 19px, #12664b 20px 20px, #12664b 21px 21px, #12664b 22px 22px, #12664b 23px 23px, #12664b 24px 24px, #12664b 25px 25px, #12664b 26px 26px, #12664b 27px 27px, #12664b 28px 28px, #12664b 29px 29px, #12664b 30px 30px, #12664b 31px 31px, #12664b 32px 32px, #12664b 33px 33px, #12664b 34px 34px, #12664b 35px 35px, #12664b 36px 36px, #12664b 37px 37px, #12664b 38px 38px, #12664b 39px 39px, #12664b 40px 40px, #12664b 41px 41px, #12664b 42px 42px, #12664b 43px 43px, #12664b 44px 44px, #12664b 45px 45px, #12664b 46px 46px, #12664b 47px 47px, #12664b 48px 48px, #12664b 49px 49px, #12664b 50px 50px; }
+
+#new-quote-btn {
+  display: block;
+  padding-left: 30px; }
+
+#icon-box {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  background-color: #1b926c;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px; }
+
+#social-button-twitter {
+  text-align: left; }
+
+#social-button-twitter div {
+  display: inline-block;
+  margin: .5em; }
+
+#new-quote-btn {
+  text-align: center;
+  color: white; }
+
+#new-quote-btn span {
+  display: inline-block; }
+
+body {
+  background: url("../img/background.png"); }
+
+.container {
+  padding-top: 60px; }
+
+.fa-twitter:hover {
+  transition: color 1s;
+  color: #00aced; }
+
+#quote-text {
+  font-size: medium;
+  transition: background-color 3s; }
+
+#quote-person {
+  text-align: right;
+  font-style: italic;
+  width: 100%; }
+
+.mdl-card__title {
+  min-height: 200px; }
+
+.aboutPage {
+  font-size: 11px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px; }
+
+.background-image-acknowledgement {
+  font-size: 10px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px; }
+
+/* .color-change {
+  transition: background-color 3s;
+} */
+.mdl-cell {
+  margin-top: 0px; }
+
+.mdl-grid {
+  padding: 0px; }
+
+/*# sourceMappingURL=main.css.map */

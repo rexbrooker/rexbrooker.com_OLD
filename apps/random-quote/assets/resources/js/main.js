@@ -13,16 +13,7 @@ function createTwitterPost(jsonData) {
         quotePerson = $("#quote-person").text();
     }
     var hrefLink = siteLink + '"' + quoteText + '" ' + quotePerson;
-    // console.log("hrefLink:", hrefLink);
-    // var linkCharCount = hrefLink.count;
-    // if (linkCharCount > 140) {
-    //   var linkCharCountOver = linkCharCount - 140;
-    //   quoteText = quoteText.substring(0, quoteText.length - linkCharCountOver);
-    //   hrefLink = siteLink + '"' + quoteText + '"' + quotePerson;
-    //   console.log("Quote char reduced");
-    // } else {
-    //   console.log("Quote char unchanged");
-    // }
+
     return hrefLink;
 }
 

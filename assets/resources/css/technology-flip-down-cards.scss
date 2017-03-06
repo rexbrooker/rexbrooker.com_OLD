@@ -1,0 +1,44 @@
+// Some vars
+$animation-duration: 0.3s;
+// $window-background: transparent;
+$window-width: inherit;
+$window-height: inherit;
+$window-margin: 0px;
+$window-padding: 10px;
+
+
+#f1_container {
+  position: relative;
+  margin: $window-margin;
+  width: $window-width;
+  height: $window-height;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateX(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateX(180deg);
+  box-sizing: border-box;
+  padding: $window-padding;
+  // color: white;
+  // text-align: center;
+  // background-color: #aaa;
+}

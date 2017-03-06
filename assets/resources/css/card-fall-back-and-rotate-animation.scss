@@ -1,0 +1,134 @@
+// Some vars
+$animation-duration: 8s;
+$window-top: #3c3e99;
+$window-bar: #4c54a4;
+$window-content: #AAA;
+$window-background: transparent;
+$window-width: 320px;
+$window-height: 320px;
+$header-height: 0px;
+$article-height: ($window-height - $header-height);
+.card-fall-back-and-rotate-animation-wrapper {
+    // we need to reserve some space fot this to work.
+    position: relative;
+    width: ($window-width);
+    height: $window-height;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: $background-color;
+    overflow: hidden;
+    shadow: 2px;
+}
+
+.card-fall-back-and-rotate-animation {
+    // we need to reserve some space fot this to work.
+    position: relative;
+    width: ($window-width * 3);
+    height: $window-height;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: $background-color;
+    // outline: black solid 1px;
+    overflow: hidden;
+    ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: $window-width;
+        height: $window-height;
+        background-color: $window-background;
+        transform: translate(-50%, -50%);
+        will-change: opacity, transform, left, right, width;
+        > * {
+            position: absolute;
+            border-radius: 0px;
+        }
+    }
+    li {
+        top: $header-height;
+        right: 0;
+        width: $window-width;
+        height: $article-height;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        background-color: $window-content;
+        transform-origin: 50% 50%;
+        &:nth-child(1) {
+            right: 0;
+            z-index: 50;
+            transform: scale(.8);
+            // opacity: .3;
+            animation: article-one forwards $animation-duration infinite;
+        }
+        &:nth-child(2) {
+            right: 200%;
+            z-index: 45;
+            transform-origin: 50% 50%;
+            transform: scale(.8);
+            animation: article-two forwards $animation-duration infinite;
+        }
+    }
+}
+
+@keyframes article-one {
+    0%,
+    8% {
+        right: 0%;
+        transform: scale(1);
+        opacity: 1;
+        // width: 100%;
+    }
+    10% {
+        right: 0%;
+        transform: scale(.9);
+        opacity: 1;
+        // width: 100%;
+    }
+    12%,
+    20% {
+        transform: scale(.9);
+        right: -100%;
+        // width: 0%;
+        opacity: 1;
+    }
+    20%,
+    100% {
+        transform: scale(.9);
+        right: -100%;
+        // width: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes article-two {
+    0%,
+    8% {
+        left: -100%;
+        transform: scale(0.9);
+    }
+    10% {
+        left: -100%;
+        transform: scale(0.9);
+    }
+    12%,
+    14% {
+        left: 0;
+        transform: scale(0.9);
+    }
+    14%,
+    20% {
+        left: 0;
+        transform: scale(1);
+    }
+    20%,
+    100% {
+        left: 0;
+        transform: scale(1);
+    }
+}
