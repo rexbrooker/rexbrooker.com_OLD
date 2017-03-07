@@ -1,3 +1,9 @@
 examples-gitignore/
 assets/resources/img/logos/backup/
 assets/resources/img/logos/xcf/
+
+assets/resources/css/.sass-cache/
+assets/resources/css/*.css.map
+
+.sass-cache/
+*.css.map

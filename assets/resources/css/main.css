@@ -1,8 +1,10 @@
 body {
   background-color: #FDFDFD;
-  font-family: "Slabo", "Roboto", "Helvetica", "Arial", sans-serif;
-  letter-spacing: .02em;
-  font-weight: 400; }
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: white; }
+
+.body-main-container {
+  min-width: 362px; }
 
 .testing div {
   outline: 1px dashed red; }
@@ -11,64 +13,49 @@ body {
   outline: 1px dashed green; }
 
 .main-content {
-  margin: 60px;
-  margin-top: 60px; }
+  margin: 60px; }
 
 .header-main-left {
-  border-radius: 2px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  /*background: #039BE5;*/
-  position: relative;
-  min-height: 600px;
-  max-width: 300px; }
+  background-image: url("../img/left-grid-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center top; }
 
 .header-main-left-socials {
   background-color: transparent;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 25%;
-  text-align: center; }
+  position: absolute;
+  top: inherit;
+  left: inherit;
+  text-align: center;
+  align-items: center; }
 
-.header-main-left-socials-tablet {
-  background-color: transparent;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 25%;
-  display: inline-block;
-  text-align: center; }
+.header-main-left-social-icon {
+  margin: 10px 0px;
+  background-color: rgba(224, 224, 224, 0.4);
+  border-radius: 2px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  color: black; }
+
+.header-main-left-social-icon:hover {
+  color: blue; }
 
 .header-main-left-desc {
-  /*background-color : transparent;*/
+  margin-top: 0px;
   text-align: center;
   display: inline-block;
   background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: inherit;
   left: 25%;
   width: 75%;
-  min-height: inherit; }
-
-.body-main-container {
-  min-height: 700px;
-  padding-top: 60px; }
-
-.header-main-social-icons {
-  margin: 16px;
-  height: 48px;
-  padding: 10%; }
-
-.icon-center > i {
-  height: 100%;
-  width: 100%; }
+  min-height: 100%;
+  vertical-align: middle; }
 
 .main-header-profile-photo {
-  text-align: center;
-  width: 80%;
-  height: 175px;
-  margin: 10%;
-  max-width: 175px; }
+  width: 100%;
+  height: auto;
+  padding: 10%; }
 
 .main-header-profile-photo > img {
   border-radius: 50%;
@@ -76,47 +63,37 @@ body {
   height: 100%; }
 
 .header-main-right {
-  border-radius: 2px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   background-image: url("../img/background-white-paper.jpg");
   background-repeat: repeat;
-  width: 100%; }
+  width: 100%;
+  margin: 0px 8px; }
 
-.demo-card-square.mdl-card {
-  width: inherit;
-  height: inherit;
-  min-height: 320px;
-  min-width: 320px; }
+.fa-linkedin,
+.fa-twitter,
+.fa-facebook,
+.fa-envelope-o {
+  line-height: inherit;
+  margin: 20px 10%; }
 
-.demo-card-square > .mdl-card__title {
-  color: #fff;
-  background: bottom right 15% no-repeat #46B6AC; }
-
-.content-right-top-holder {
-  width: 50%;
-  top: inherit;
-  left: inherit; }
-
-.content-card-right {
-  overflow: hidden;
-  display: inline-block;
-  margin: 10px; }
+.right-grid-override {
+  align-items: center;
+  padding: 6px;
+  text-align: center; }
 
 .tech-logo {
-  max-height: 90px;
+  max-height: 70px;
   background: transparent;
-  padding: 6px 0px 6px; }
+  padding: 6px 0px 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden; }
 
 .tech-logo > img {
-  max-width: 48px;
-  max-height: 48px;
-  width: auto;
+  max-width: 100%;
   height: auto; }
 
 .tech-logo-grid {
-  text-align: center;
-  align-items: center;
-  vertical-align: middle; }
+  text-align: center; }
 
 .demo-card-image.mdl-card {
   width: 256px;
@@ -125,11 +102,13 @@ body {
 
 .demo-card-image > .mdl-card__actions {
   height: 52px;
+  padding: 16px;
   background: rgba(0, 0, 0, 0.2); }
 
 .demo-card-image__filename {
   color: #fff;
   font-size: 14px;
-  font-weight: 500; }
+  font-weight: 500;
+  text-align: left; }
 
 /*# sourceMappingURL=main.css.map */
