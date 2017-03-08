@@ -5,9 +5,7 @@ function createTwitterPost(jsonData) {
 
     if (jsonData) {
         quoteText = removeHTMLMarkUp(json[0].content);
-        // console.log("quoteText:", quoteText);
         quotePerson = jsonData[0].title;
-        // console.log("quotePerson:", quotePerson);
     } else {
         quoteText = $("#quote-text").text();
         quotePerson = $("#quote-person").text();
@@ -18,7 +16,6 @@ function createTwitterPost(jsonData) {
 }
 
 $(document).ready(function() {
-    // alert("Ready!")
     updateQuote();
 });
 
@@ -31,7 +28,6 @@ $('.fa-twitter').click(function() {
 });
 
 function updateQuote() {  
-    // changeStyleSheet();
     $.ajaxSetup({ cache: false });
     $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(json) {
         var currentQuote = json[0].content;
@@ -46,39 +42,3 @@ function removeHTMLMarkUp(text) {
     text = text.replace(/<[^>]*>/g, "").trim();
     return text;
 }
-
-// function newColor() {
-//   var colorList =
-//   [ "red", "pink", "purple", "deep_purple",
-//  "indigo", "light_blue", "cyan", "teal",
-//  "green", "light green", "lime", "yellow", 
-//  "amber", "orange", "deep_orange", "grey"];
-
-//   randomNumber = Math.floor(Math.random() * colorList.length);
-//   return colorList[randomNumber];
-// }
-
-// function changeStyleSheet(){
-
-//   var newMaterialStyleSheet = "https://code.getmdl.io/1.3.0/material." + newColor() + "-" + newColor() + ".min.css";
-//   console.log(newMaterialStyleSheet);
-//   $('#material-style-sheet').attr('href',newMaterialStyleSheet);
-// }
-(function() {
-    'use strict';
-    var snackbarContainer = document.querySelector('#demo-snackbar-example');
-    var showSnackbarButton = document.querySelector('#demo-show-snackbar');
-    var handler = function(event) {
-        showSnackbarButton.style.backgroundColor = '';
-    };
-    showSnackbarButton.addEventListener('click', function() {
-        'use strict';
-        var data = {
-            message: 'Developed by Rex Brooker.',
-            timeout: 10000,
-            actionHandler: handler,
-            actionText: 'Okay'
-        };
-        snackbarContainer.MaterialSnackbar.showSnackbar(data);
-    });
-}());
