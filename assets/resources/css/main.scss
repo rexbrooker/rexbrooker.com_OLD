@@ -10,8 +10,6 @@ $left-grid-background-image: "../img/left-grid-background.jpg";
 body {
     background-color: $background-color;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    // letter-spacing: .02em;
-    // font-weight: 400;
     color: white;
 }
 
@@ -64,11 +62,34 @@ body {
 
     border-radius: 2px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    color: black;
+    // color: black;
 }
 
-.header-main-left-social-icon:hover {
-    color:blue;
+.header-main-left-socials-collapse {
+    background-color: rgba(224,224,224, 0.4);
+    border-radius: 2px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-image: url($left-grid-background-image);
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-position: left top;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.header-main-left-socials-collapse i {
+    width: inherit;
+    height: inherit;
+    margin: 10px;
+    padding: 6px;
+}
+
+.header-main-left-social-icon-collapse {
+    // margin: 0px 10px;
+    width:50px;
+    background-color: transparent;    
+    // border-radius: 2px;
+    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .header-main-left-desc {
@@ -99,7 +120,6 @@ body {
 }
 
 .header-main-right {
-    // border-radius: 2px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     background-image: url("../img/background-white-paper.jpg");
     background-repeat: repeat;
@@ -114,20 +134,11 @@ body {
 {     
     line-height: inherit;
     margin: 20px 10%;
-    
-}
-
-.right-grid-override{
-    align-items: center;
-    padding: 6px;
-    text-align: center;
 }
 
 .tech-logo {
     max-height: 70px;
     background: transparent;
-    padding: 6px 0px 6px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     overflow: hidden;
 }
 
@@ -140,24 +151,21 @@ body {
     text-align: center;
 }
 
-
 .demo-card-image.mdl-card {
-  width: 256px;
-  height: 256px;
-  background: url('/assets/resources/img/random-quote-generator-screenshot.png') center / cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 256px;
+    height: 256px;
+    background: url('/assets/resources/img/random-quote-generator-screenshot.png') center / cover;
 }
 .demo-card-image > .mdl-card__actions {
   height: 52px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.2);
 }
+
 .demo-card-image__filename {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
   text-align: left;
-}
-
-.social-button {
-    // max-width: 20px;
 }

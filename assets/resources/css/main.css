@@ -34,11 +34,28 @@ body {
   margin: 10px 0px;
   background-color: rgba(224, 224, 224, 0.4);
   border-radius: 2px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  color: black; }
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
-.header-main-left-social-icon:hover {
-  color: blue; }
+.header-main-left-socials-collapse {
+  background-color: rgba(224, 224, 224, 0.4);
+  border-radius: 2px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-image: url("../img/left-grid-background.jpg");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: left top;
+  margin-bottom: 3px;
+  text-align: center; }
+
+.header-main-left-socials-collapse i {
+  width: inherit;
+  height: inherit;
+  margin: 10px;
+  padding: 6px; }
+
+.header-main-left-social-icon-collapse {
+  width: 50px;
+  background-color: transparent; }
 
 .header-main-left-desc {
   margin-top: 0px;
@@ -76,16 +93,9 @@ body {
   line-height: inherit;
   margin: 20px 10%; }
 
-.right-grid-override {
-  align-items: center;
-  padding: 6px;
-  text-align: center; }
-
 .tech-logo {
   max-height: 70px;
   background: transparent;
-  padding: 6px 0px 6px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   overflow: hidden; }
 
 .tech-logo > img {
@@ -96,6 +106,7 @@ body {
   text-align: center; }
 
 .demo-card-image.mdl-card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 256px;
   height: 256px;
   background: url("/assets/resources/img/random-quote-generator-screenshot.png") center/cover; }
